@@ -1,109 +1,116 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Você me ama?</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('Imagem do WhatsApp de 2025-06-26 à(s) 16.50.39_53638be7.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-            text-shadow: 2px 2px 4px #000;
-        }
-        h1 {
-            font-size: 3em;
-            animation: piscar 1s infinite;
-            color: #00f;
-        }
-        @keyframes piscar {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        button {
-            padding: 15px 30px;
-            font-size: 1.5em;
-            margin: 10px;
-            cursor: pointer;
-            border: none;
-            border-radius: 10px;
-        }
-        #sim { background-color: #28a745; color: white; }
-        #nao { background-color: #dc3545; color: white; position: relative; }
-        #ratinho {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-        }
-        #ratinho img {
-            max-width: 300px;
-            margin-top: 20px;
-        }
-        #galeria {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-        #galeria img {
-            max-width: 300px;
-            margin: 10px;
-            border: 3px solid white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Você me ama de verdade?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('Imagem do WhatsApp de 2025-06-26 à(s) 16.55.06.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 3em;
+      animation: blink 1s infinite;
+      color: #00f;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.5em;
+      border: none;
+      margin: 20px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    #sim {
+      background-color: #28a745;
+      color: white;
+    }
+
+    #nao {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    #galeria {
+      display: none;
+      margin-top: 20px;
+    }
+
+    #ratinho-container {
+      display: none;
+      margin-top: 20px;
+    }
+
+    #ratinho-container img {
+      width: 200px;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>Você me ama de verdade?</h1>
-    <div class="buttons">
-        <button id="sim">Sim</button>
-        <button id="nao">Não</button>
-    </div>
-    <div id="galeria">
-        <img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_dc4d828d.jpg' /><img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_5236bfda.jpg' /><img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_aeb6ba12.jpg' /><img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_6bfce558.jpg' /><img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_d3798ac7.jpg' />
-    </div>
-    <div id="ratinho">
-        <img src="Imagem do WhatsApp de 2025-06-26 à(s) 16.51.42_207929ac.jpg" alt="Ratinho triste">
-        <p>Música triste tocando...</p>
-    </div>
-    <audio id="musicaSim" src="Não sei dizer se é amor ou saudade.mp3" preload="auto"></audio>
-    <audio id="musicaNao" src="https://www.myinstants.com/media/sounds/sad-violin.mp3" preload="auto"></audio>
+  <h1>Você me ama de verdade?</h1>
+  <button class="btn" id="sim">Sim</button>
+  <button class="btn" id="nao">Não</button>
 
-    <script>
-        const sim = document.getElementById('sim');
-        const nao = document.getElementById('nao');
-        const galeria = document.getElementById('galeria');
-        const ratinho = document.getElementById('ratinho');
-        const musicaSim = document.getElementById('musicaSim');
-        const musicaNao = document.getElementById('musicaNao');
+  <div id="galeria">
+    <img src="Imagem do WhatsApp de 2025-06-26 à(s) 16.55.01.jpg" width="300">
+    <img src="Imagem do WhatsApp de 2025-06-26 à(s) 16.55.02.jpg" width="300">
+    <img src="Imagem do WhatsApp de 2025-06-26 à(s) 16.55.03.jpg" width="300">
+    <img src="Imagem do WhatsApp de 2025-06-26 à(s) 16.55.04.jpg" width="300">
+    <img src="Imagem do WhatsApp de 2025-06-26 à(s) 16.55.05.jpg" width="300">
+  </div>
 
-        sim.onclick = () => {
-            musicaSim.play();
-            galeria.style.display = 'flex';
-        };
+  <div id="ratinho-container">
+    <img src="rato.png" alt="Ratinho triste">
+    <p style="color: #ffdddd; font-size: 1.5em;">Você partiu o coração do ratinho... 😢</p>
+  </div>
 
-        nao.onmouseover = () => {
-            const x = Math.random() * window.innerWidth * 0.6;
-            const y = Math.random() * window.innerHeight * 0.6;
-            nao.style.position = 'absolute';
-            nao.style.left = x + 'px';
-            nao.style.top = y + 'px';
-        };
+  <audio id="audio-sim" src="Não sei dizer se é amor ou saudade.mp3"></audio>
+  <audio id="audio-nao" src="dor.mp3"></audio>
 
-        nao.onclick = () => {
-            musicaNao.play();
-            ratinho.style.display = 'flex';
-        };
-    </script>
+  <script>
+    const botaoSim = document.getElementById("sim");
+    const botaoNao = document.getElementById("nao");
+    const galeria = document.getElementById("galeria");
+    const ratinho = document.getElementById("ratinho-container");
+    const audioSim = document.getElementById("audio-sim");
+    const audioNao = document.getElementById("audio-nao");
+
+    botaoSim.addEventListener("click", () => {
+      galeria.style.display = "block";
+      ratinho.style.display = "none";
+      audioNao.pause();
+      audioNao.currentTime = 0;
+      audioSim.play();
+    });
+
+    botaoNao.addEventListener("click", () => {
+      ratinho.style.display = "block";
+      galeria.style.display = "none";
+      audioSim.pause();
+      audioSim.currentTime = 0;
+      audioNao.play();
+    });
+  </script>
 </body>
 </html>
