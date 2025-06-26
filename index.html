@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Você me ama?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('Imagem do WhatsApp de 2025-06-26 à(s) 16.50.39_53638be7.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+        h1 {
+            font-size: 3em;
+            animation: piscar 1s infinite;
+            color: #00f;
+        }
+        @keyframes piscar {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+        #sim { background-color: #28a745; color: white; }
+        #nao { background-color: #dc3545; color: white; position: relative; }
+        #ratinho {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        #ratinho img {
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        #galeria {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #galeria img {
+            max-width: 300px;
+            margin: 10px;
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você me ama de verdade?</h1>
+    <div class="buttons">
+        <button id="sim">Sim</button>
+        <button id="nao">Não</button>
+    </div>
+    <div id="galeria">
+        <img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_dc4d828d.jpg' /><img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_5236bfda.jpg' /><img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_aeb6ba12.jpg' /><img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_6bfce558.jpg' /><img src='Imagem do WhatsApp de 2025-06-26 à(s) 16.50.40_d3798ac7.jpg' />
+    </div>
+    <div id="ratinho">
+        <img src="Imagem do WhatsApp de 2025-06-26 à(s) 16.51.42_207929ac.jpg" alt="Ratinho triste">
+        <p>Música triste tocando...</p>
+    </div>
+    <audio id="musicaSim" src="Não sei dizer se é amor ou saudade.mp3" preload="auto"></audio>
+    <audio id="musicaNao" src="https://www.myinstants.com/media/sounds/sad-violin.mp3" preload="auto"></audio>
+
+    <script>
+        const sim = document.getElementById('sim');
+        const nao = document.getElementById('nao');
+        const galeria = document.getElementById('galeria');
+        const ratinho = document.getElementById('ratinho');
+        const musicaSim = document.getElementById('musicaSim');
+        const musicaNao = document.getElementById('musicaNao');
+
+        sim.onclick = () => {
+            musicaSim.play();
+            galeria.style.display = 'flex';
+        };
+
+        nao.onmouseover = () => {
+            const x = Math.random() * window.innerWidth * 0.6;
+            const y = Math.random() * window.innerHeight * 0.6;
+            nao.style.position = 'absolute';
+            nao.style.left = x + 'px';
+            nao.style.top = y + 'px';
+        };
+
+        nao.onclick = () => {
+            musicaNao.play();
+            ratinho.style.display = 'flex';
+        };
+    </script>
+</body>
+</html>
